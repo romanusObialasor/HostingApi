@@ -1,4 +1,4 @@
-// require("dotenv").config();
+require("dotenv").config();
 // const express = require("express");
 // const mongoose = require("mongoose");
 // const port = process.env.PORT || 5000;
@@ -30,7 +30,7 @@
 // });
 
 const express = require("express");
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const studentData = [
   { id: 1, name: "Romanus", course: "Javascript" },
