@@ -2,12 +2,10 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const router = require("./router");
-const url =
-  "mongodb+srv://wrsMKqHXcLIdob5I:wrsMKqHXcLIdob5I@cluster0.vxqcy.mongodb.net/newDB?retryWrites=true&w=majority";
 const port = process.env.PORT || 5000;
 
 mongoose
-  .connect(url, {
+  .connect(process.env.MONGODB_URL, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: false,
